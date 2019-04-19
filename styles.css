@@ -1,0 +1,164 @@
+body {
+    font-family: 'Bitter', serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+legend {
+    font-size: 1.2em;
+    color: #00008B;
+
+}
+
+button:hover,
+button:focus {
+    outline: none;
+    background: #000000;
+    color: #ffffff;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+textarea {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1em;
+    background: lightblue;
+    min-width: 100%;
+}
+
+.navbar {
+    background-color: #333;
+    padding-bottom: 1rem;
+}
+
+
+
+/*  grids */
+
+main {
+	display: grid;
+}
+
+/* hero content */
+
+.content {
+	display: grid;
+}
+
+/* about content */
+
+.about-content {
+	display: grid;
+}
+
+/*  gallery */
+
+figure {
+    grid-template-columns: lfr lfr;
+    align-items: center
+        
+}
+
+figcaption {
+    margin-left: 1rem;
+}
+
+
+/*  article */
+
+article {
+	display: grid;
+}
+
+/* form container */
+.form-container {
+	display: grid;
+}
+
+/* footer */
+
+footer {
+	display: grid;
+}
+
+/*  layout */
+
+/*   mobile is the default layout*/
+
+/* tablet layout >=48rem (768px) */
+
+@media screen and (min-width: 48rem) {
+
+	/*      hero content */
+    
+    .content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .content picture,
+    .content p
+    .about-content {
+       grid-column: 2/3; 
+    }
+
+	/*	about content */
+
+	/*	gallery */
+
+	/*	article */
+    article,
+    .form-container {
+        grid-template-columns: 1fr 48ch 1fr;
+    }
+    
+    .story h1
+    .story h2
+    .story  .story-body,
+    form {
+        grid-column: 2/3;
+    }
+	/*	form */
+
+
+}
+
+/* wide screen layout >=64rem (1024px) */
+
+@media screen and (min-width: 64rem) {
+    
+    .mobile-first {
+        display: none;
+    }
+
+	/*      hero content */
+
+	/*	about content */
+
+	/*	gallery */
+    
+    .gallary {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .gallary h1 {
+        grid-column: 1/4;
+    }
+    
+    figure {
+        grid-template-columns: 
+    }
+    
+
+	/*	article */
+
+	/*	form */
+
+}

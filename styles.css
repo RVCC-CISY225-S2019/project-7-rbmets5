@@ -44,49 +44,47 @@ textarea {
 /*  grids */
 
 main {
-	display: grid;
+    display: grid;
 }
 
 /* hero content */
 
 .content {
-	display: grid;
+    display: grid;
 }
 
 /* about content */
 
 .about-content {
-	display: grid;
+    display: grid;
 }
 
 /*  gallery */
 
-figure {
-    grid-template-columns: lfr lfr;
-    align-items: center
-        
+.gallery {
+    display: grid;
 }
 
-figcaption {
-    margin-left: 1rem;
+figure {
+    display: grid;
 }
 
 
 /*  article */
 
 article {
-	display: grid;
+    display: grid;
 }
 
 /* form container */
 .form-container {
-	display: grid;
+    display: grid;
 }
 
 /* footer */
 
 footer {
-	display: grid;
+    display: grid;
 }
 
 /*  layout */
@@ -97,35 +95,51 @@ footer {
 
 @media screen and (min-width: 48rem) {
 
-	/*      hero content */
-    
+    .mobile-first {
+        display: none;
+    }
+
+    /*      hero content */
+
     .content {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    
+
     .content picture,
-    .content p
+    .content p,
     .about-content {
-       grid-column: 2/3; 
+        grid-column: 2/3;
     }
 
-	/*	about content */
+    /*	about content */
 
-	/*	gallery */
+    /*	gallery */
 
-	/*	article */
+    figure {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    figcaption {
+        margin-left: 1rem;
+    }
+
+
+
+    /*	article */
     article,
     .form-container {
         grid-template-columns: 1fr 48ch 1fr;
     }
-    
-    .story h1
-    .story h2
-    .story  .story-body,
+
+    article h1,
+    .story-body,
+    .form-contaiiner h1,
     form {
         grid-column: 2/3;
     }
-	/*	form */
+
+    /*	form */
 
 
 }
@@ -133,32 +147,27 @@ footer {
 /* wide screen layout >=64rem (1024px) */
 
 @media screen and (min-width: 64rem) {
-    
-    .mobile-first {
-        display: none;
-    }
 
-	/*      hero content */
 
-	/*	about content */
 
-	/*	gallery */
-    
-    .gallary {
+    /*      hero content */
+
+    /*	about content */
+
+    /*	gallery */
+
+    .gallery {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    
-    .gallary h1 {
+
+    .gallery h1 {
         grid-column: 1/4;
     }
-    
-    figure {
-        grid-template-columns: 
-    }
-    
 
-	/*	article */
 
-	/*	form */
+
+    /*	article */
+
+    /*	form */
 
 }

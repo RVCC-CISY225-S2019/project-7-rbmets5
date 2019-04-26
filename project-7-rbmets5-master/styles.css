@@ -1,0 +1,173 @@
+body {
+    font-family: 'Bitter', serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+legend {
+    font-size: 1.2em;
+    color: black;
+
+}
+
+button:hover,
+button:focus {
+    outline: none;
+    background: #000000;
+    color: #ffffff;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+textarea {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1em;
+    background: lightblue;
+    min-width: 100%;
+}
+
+.navbar {
+    background-color:#add8e6;
+    padding-bottom: 1rem;
+}
+
+
+
+/*  grids */
+
+main {
+    display: grid;
+}
+
+/* hero content */
+
+.content {
+    display: grid;
+}
+
+/* about content */
+
+.about-content {
+    display: grid;
+}
+
+/*  gallery */
+
+.gallery {
+    display: grid;
+}
+
+figure {
+    display: grid;
+}
+
+
+/*  article */
+
+article {
+    display: grid;
+}
+
+/* form container */
+.form-container {
+    display: grid;
+}
+
+/* footer */
+
+footer {
+    display: grid;
+}
+
+/*  layout */
+
+/*   mobile is the default layout*/
+
+/* tablet layout >=48rem (768px) */
+
+@media screen and (min-width: 48rem) {
+
+    .mobile-first {
+        display: none;
+    }
+
+    /*      hero content */
+
+    .content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .content picture,
+    .content p,
+    .about-content {
+        grid-column: 2/3;
+    }
+
+    /*	about content */
+
+    /*	gallery */
+
+    figure {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    figcaption {
+        margin-left: 1rem;
+    }
+
+
+
+    /*	article */
+    article,
+    .form-container {
+        grid-template-columns: 1fr 48ch 1fr;
+    }
+
+    article h1,
+    .story-body,
+    .form-contaiiner h1,
+    form {
+        grid-column: 2/3;
+    }
+
+    /*	form */
+
+
+}
+
+/* wide screen layout >=64rem (1024px) */
+
+@media screen and (min-width: 64rem) {
+
+
+
+    /*      hero content */
+
+    /*	about content */
+
+    /*	gallery */
+
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .gallery h1 {
+        grid-column: 1/4;
+    }
+
+
+
+    /*	article */
+
+    /*	form */
+
+}

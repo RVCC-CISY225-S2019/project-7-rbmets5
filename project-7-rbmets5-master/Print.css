@@ -1,0 +1,13 @@
+/* Print CSS */
+
+header,
+.form-container,
+footer,
+.back-to-top {
+    display: none;
+}
+
+body {
+    margin left: 1rem 
+    margin right: 1rem
+}

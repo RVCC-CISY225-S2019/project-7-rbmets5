@@ -1,9 +1,11 @@
 body {
     font-family: 'Bitter', serif;
+    background-color: aliceblue;
 }
 
 img {
-    max-width: 100%;
+    max-width: 50%;
+    
 }
 
 legend {
@@ -12,8 +14,7 @@ legend {
 
 }
 
-button:hover,
-button:focus {
+button:active {
     outline: none;
     background: #000000;
     color: #ffffff;
@@ -37,8 +38,7 @@ textarea {
 .navbar {
     background-color: #add8e6;
     padding-bottom: 1rem;
-}
-
+} 
 
 
 /*  grids */
@@ -169,9 +169,9 @@ footer {
     /*	article */
 
     /*	form */
+}
 
-
-p:first-child:first-letter {
+.dropcap:first-child:first-letter {
     color: navy;
     float: left;
     font-family: Georgia;
@@ -243,11 +243,71 @@ h6 {
   font-weight: bold;
 }
 
-button:hover { 
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
 
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 } 
 
-button:active { 
-
-} 
-    
+.svg-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+	  margin: 0 auto;
+  width: 320px;  
+}
+.shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke: #19f6e8;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.text {
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color: black
+  top: -48px;
+  position: relative;
+}
+.svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
